@@ -6,8 +6,7 @@ apps. It uses a variety of technologies, including:
 
 - [Node](http://nodejs.org/) for the server
 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/) for the UI
-- [Backbone](http://documentcloud.github.com/backbone/) for the client
-- [Mocha](http://visionmedia.github.com/mocha/) and [expect.js](https://github.com/LearnBoost/expect.js/blob/master/README.md) for tests
+- [Ember](http://emberjs.org)
 
 ## Running the app
 
@@ -19,29 +18,3 @@ apps. It uses a variety of technologies, including:
    without a key.
 4. To run the development server: `node bin/dev`
 5. [Visit the app in your browser](http://localhost:4444).
-
-## Running the tests
-
-When the development server is running, you can [run the tests here](http://localhost:4444/_test).
-
-## Building the app
-
-You will need to have RequireJS installed:
-
-    npm install -g requirejs
-
-Then, from the root of the project, run the following commands:
-
-    r.js -o srchr.build.js
-    r.js -o cssIn=assets/css/srchr.css out=prod/assets/css/srchr.css
-
-You can run the built version of the app by running:
-
-    node bin/server
-
-## TODOs
-
-- Make it possible to favorite items
-- Make it possible to tag favorites
-- Incorporate other content sources
-- Use [grunt](https://github.com/cowboy/grunt)
