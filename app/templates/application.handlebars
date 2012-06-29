@@ -1,0 +1,30 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#">Srchr</a>
+      <ul class="nav">
+        <!-- <li class="active"><a href="#">Search</a></li> -->
+        <!-- <li><a href="#favorites">Favorites</a></li> -->
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span9" id="mainbar">
+      {{outlet search}}
+      {{outlet}}
+    </div>
+    <div class="span3" id="sidebar">
+      {{outlet recents}}
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2012 <a href="http://rmurphey.com">Rebecca Murphey</a></p>
+  </footer>
+</div>
+
