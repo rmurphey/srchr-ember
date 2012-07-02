@@ -4,9 +4,14 @@ This app searches Flickr and Youtube for content based an a search term entered
 by a user. It is intended as a demo of techniques for building client-side
 apps. It uses a variety of technologies, including:
 
+- [Ember](http://emberjs.org)
 - [Node](http://nodejs.org/) for the server
 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/) for the UI
-- [Ember](http://emberjs.org)
+
+Innumerable thanks to Tom Dale (@tomdale) for his help with this; he wrote the
+first draft while I looked on, and I converted it to run with the Node server
+and using the markup from [srchr-demo](https://github.com/rmurphey/srchr-demo).
+I am using this as a basis for beginning my Ember learning.
 
 ## Running the app
 
