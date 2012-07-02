@@ -7,25 +7,8 @@
   </ul>
 
   {{#if controller.length}}
-    <section>
-    {{#each result in controller}}
-    <div class="result {{result.type}}">
-      <div class="row-fluid">
-        <div class="span2">
-          <img {{bindAttr src="result.thumb"}} width="100">
-        </div>
-        <div class="span9">
-          {{#if result.title}}
-          <h3><a href="{{result.link}}">{{result.title}}</a></h3>
-          {{else}}
-          <p><a href="{{result.link}}">view original</a></p>
-          {{/if}}
-          <p>{{result.content}}</p>
-        </div>
-        <div class="span1"><i class="{{result.icon}}"></i></div>
-      </div>
-      <hr>
-    </div>
+    {{#each controller}}
+      {{view Srchr.ResultsItemView}}
     {{/each}}
   {{else}}
   <section>Loading ...</section>
