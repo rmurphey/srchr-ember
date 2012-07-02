@@ -8,7 +8,7 @@ requirejs.config({
     // Libraries
     jquery : '../lib/jquery',
     handlebars : '../lib/handlebars',
-    Ember : '../lib/ember.min',
+    Ember : '../lib/ember',
     templates : './templates',
     hbs : '../lib/hbs',
     Handlebars : '../lib/Handlebars',

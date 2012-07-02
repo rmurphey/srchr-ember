@@ -8,7 +8,9 @@ define([
 
   'app/views/application_view',
   'app/views/recents_view',
+  'app/views/recents_item_view',
   'app/views/results_view',
+  'app/views/results_item_view',
   'app/views/search_view'
 ], function(Ember) {
   var router = Ember.Router.extend({
@@ -32,10 +34,16 @@ define([
 
       performSearch: function(router) {
         var query = router.getPath('searchController.query');
-        var recentsController = router.get('recentsController');
-
-        recentsController.addQuery(query);
         router.transitionTo('result', query);
+      },
+
+      searchRecent: function(router, event) {
+        router.setPath('searchController.query', event.context);
+        router.send('performSearch');
+      },
+
+      eventTransitions: {
+        searchRecent: 'result'
       },
 
       index: Ember.Route.extend({
@@ -45,10 +53,13 @@ define([
       result: Ember.Route.extend({
         route: '/search/:query',
 
-        connectOutlets: function(router, context) {
+        connectOutlets: function(router, query) {
+          var recentsController = router.get('recentsController');
           var applicationController = router.get('applicationController');
+
+          recentsController.addQuery(query);
           applicationController.connectOutlet('results');
-          router.get('resultsController').fetch(context);
+          router.get('resultsController').fetch(query);
         },
 
         serialize: function(router, context) {

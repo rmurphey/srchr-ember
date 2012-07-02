@@ -1,8 +1,10 @@
 <div class="component recent-searches">
   <h3>Recent Searches</h3>
   <ul class="nav nav-pills nav-stacked js-searches">
-    {{#each recent in controller}}
-    <li>{{recent}}</li>
+    {{#each controller}}
+      {{#view Srchr.RecentsItemView classBinding="isActive:active"}}
+        <a {{action searchRecent href=true}}>{{this}}</a>
+      {{/view}}
     {{/each}}
   </ul>
 </div>
