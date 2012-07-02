@@ -12,7 +12,7 @@
     <div class="result {{result.type}}">
       <div class="row-fluid">
         <div class="span2">
-          <img src="{{result.thumb}}" width="100">
+          <img {{bindAttr src="result.thumb"}} width="100">
         </div>
         <div class="span9">
           {{#if result.title}}
